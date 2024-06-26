@@ -1,6 +1,3 @@
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="$HOME/.local/bin:$PATH"
 
