@@ -12,6 +12,7 @@ asdf plugin-add java https://github.com/halcyon/asdf-java.git
 
 # install / configure java
 asdf install java latest:openjdk-22
+asdf global java latest:openjdk-22
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
