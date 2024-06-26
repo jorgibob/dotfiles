@@ -25,7 +25,7 @@ git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-m
 # Setup configs
 echo ".dotfiles" >> .gitignore
 git clone --bare https://github.com/ravenholt/dotfiles.git $HOME/.dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 mkdir -p .dotfiles-backup && \
 config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
