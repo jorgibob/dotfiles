@@ -2,15 +2,22 @@
 
 # brew
 brew install asdf
+brew install pyenv
 brew install nvm
 brew install fzf
-brew install pyenv
+brew install neovim
 
 # Add asdf plugin for java
 asdf plugin-add java https://github.com/halcyon/asdf-java.git
 
+# install / configure java
+asdf install java latest:openjdk-22
+
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# install lvim
+LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
