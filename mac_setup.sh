@@ -6,6 +6,9 @@ brew install nvm
 brew install fzf
 brew install pyenv
 
+# Add asdf plugin for java
+asdf plugin-add java https://github.com/halcyon/asdf-java.git
+
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
@@ -37,4 +40,6 @@ xargs -I{} mv {} .dotfiles-backup/{}
 
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
+
+
 
