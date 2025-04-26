@@ -11,7 +11,17 @@ NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Ho
 brew update
 brew upgrade
 
-brew instal mise  
+# install apps
+brew install --cask mos
+brew install --cask betterdisplay
+brew install --cask soundsource
+brew install --cask rectangle
+brew install --cask kitty
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask discord
+
+brew install mise  
 brew install fzf
 brew install neovim
 
