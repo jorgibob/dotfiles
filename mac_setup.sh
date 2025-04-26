@@ -41,6 +41,9 @@ mise use -g node
 # install python
 mise use -g python
 
+# activate shims
+eval "$(mise activate zsh)"
+
 # install lvim
 LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
 
@@ -64,6 +67,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # Setup configs
 echo ".dotfiles" >> .gitignore
 git clone --bare https://github.com/jorgibob/dotfiles.git $HOME/.dotfiles
+
+shopt -s expand_aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 mkdir -p .dotfiles-backup && \
