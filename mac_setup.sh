@@ -63,7 +63,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 # Setup configs
 echo ".dotfiles" >> .gitignore
-git clone --bare https://github.com/ravenholt/dotfiles.git $HOME/.dotfiles
+git clone --bare https://github.com/jorgibob/dotfiles.git $HOME/.dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 mkdir -p .dotfiles-backup && \
