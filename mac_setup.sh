@@ -65,15 +65,16 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 /bin/bash -c "$(cd ~/Library/Fonts && curl -O -fsSL https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)"
 
 # Setup configs
-# echo ".dotfiles" >> .gitignore
-# git clone --bare https://github.com/jorgibob/dotfiles.git $HOME/.dotfiles
+echo ".dotfiles" >> .gitignore
+git clone --bare https://github.com/jorgibob/dotfiles.git $HOME/.dotfiles
 
-# shopt -s expand_aliases
-# alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+fn dotfiles () {
+  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
+}
 
-# mkdir -p .dotfiles-backup && \
-# dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
-# xargs -I{} mv {} .dotfiles-backup/{}
+mkdir -p .dotfiles-backup && \
+dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+xargs -I{} mv {} .dotfiles-backup/{}
 
 # dotfiles checkout
 # dotfiles config --local status.showUntrackedFiles no
