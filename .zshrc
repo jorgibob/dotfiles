@@ -124,7 +124,8 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-eval "$(/Users/anders/.local/bin/mise activate zsh)"
+eval "$($HOME/.local/bin/mise activate zsh)"
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/anders/.docker/completions $fpath)
 autoload -Uz compinit
