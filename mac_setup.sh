@@ -68,9 +68,13 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 echo ".dotfiles" >> .gitignore
 git clone --bare https://github.com/jorgibob/dotfiles.git $HOME/.dotfiles
 
+fn dotfiles () {
+  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "@"
+}
+
 mkdir -p .dotfiles-backup && \
-/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .dotfiles-backup/{}
 
-# dotfiles checkout
-# dotfiles config --local status.showUntrackedFiles no
+dotfiles checkout
+dotfiles config --local status.showUntrackedFiles no
