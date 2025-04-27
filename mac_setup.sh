@@ -69,7 +69,7 @@ echo ".dotfiles" >> .gitignore
 git clone --bare https://github.com/jorgibob/dotfiles.git $HOME/.dotfiles
 
 fn dotfiles() {
-  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "@"
+  /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "$@"
 }
 
 mkdir -p .dotfiles-backup && \
